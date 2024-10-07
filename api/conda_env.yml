@@ -1,0 +1,11 @@
+name: language-learning-role-play-chat-bot
+channels:
+  - conda-forge
+  - conda-forge/label/gcc7
+  - defaults
+  - pytorch
+  - free
+dependencies:
+  - fastapi
+  - openai
+  - python-dotenv

@@ -1,0 +1,8 @@
+.chat-box {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.message-content {
+  white-space: pre-line;
+}
