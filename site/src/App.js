@@ -18,7 +18,7 @@ const App = () => {
      */
     const fetchScenarioTasks = async () => {
       try {
-        const response = await axios.post('http://127.0.0.1:8000/scenario-tasks/', {
+        const response = await axios.post(apiUrl + '/scenario-tasks/', {
           // we can put User's parameters like language, level, topic etc. here
         });
 
@@ -59,7 +59,7 @@ const App = () => {
 
     console.log(requestBody)
 
-    const response = await axios.post("http://127.0.0.1:8000/chat/", requestBody);
+    const response = await axios.post(apiUrl + "/chat/", requestBody);
     console.log(response.data)
 
     if (response.data.lastMessageEvaluation) {
