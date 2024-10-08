@@ -4,7 +4,7 @@ import './App.css';
 import axios from 'axios';
 
 const App = () => {
-  const apiUrl = process.env.API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState("");
   const [scenarioTasks, setScenarioTasks] = useState({"scenario": "", "tasks": [], "completed": []});
@@ -18,6 +18,7 @@ const App = () => {
      */
     const fetchScenarioTasks = async () => {
       try {
+        console.log('API URL: ', apiUrl)
         const response = await axios.post(apiUrl + '/scenario-tasks/', {
           // we can put User's parameters like language, level, topic etc. here
         });
